@@ -1,3 +1,5 @@
+# https://colab.research.google.com/drive/1KPWd4gbEh6AcE1PM8F1XxC6gbyNRu8bR
+
 # -*- coding: utf-8 -*-
 """2차과제_최종
 
