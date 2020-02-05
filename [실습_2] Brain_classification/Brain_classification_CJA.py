@@ -43,9 +43,10 @@ print(norm_x_train.shape)
 print(y_train.shape)
 
 #x_data.dtype
-y_data.dtype
+#y_data.dtype
 
 #검증데이터 테스트데이터 구분
+
 
 #모델생성
 
@@ -59,13 +60,11 @@ model = torch.nn.Sequential(linear1, relu, linear2)
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 for epoch in range(nb_epochs + 1):
-    hypothesis = F.softmax(model(x_train), dim = 1)
-    #y_one_hot = torch.zeros_like(hypothesis)
-    #y_one_hot.scatter_(1, y_train.unsqueeze(1), 1)
+    hypothesis = model(x_train)
 
-    #cost = (y_one_hot * -torch.log(F.softmax(hypothesis, dim=1))).sum(dim=1).mean()
-    cost = F.cross_entropy(hypothesis, y_train)
+    #cost = F.cross_entropy(hypothesis, y_train)
     #cost = torch.nn.CrossEntropyLoss(hypothesis, y_train)
+    cost = F.mse_loss(hypothesis, y_train)
 
 
     # cost로 H(x) 개선
