@@ -31,7 +31,7 @@ y_data = xy_data[:,[-1]]
 
 #데이터 텐서로 변환
 x_train = torch.FloatTensor(x_data)
-y_train = torch.LongTensor(y_data)
+y_train = torch.FloatTensor(y_data)
 
 
 #x 데이터 값 정규화
