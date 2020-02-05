@@ -1,3 +1,5 @@
+# https://colab.research.google.com/drive/1UqfDpot6JwOHdc6N5BfIL9CJWBAaifh1
+
 # -*- coding: utf-8 -*-
 """물은 물이요 산은 산이로다.
 
