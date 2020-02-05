@@ -10,6 +10,7 @@ import torch.optim as optim
 
 #시드고정
 torch.manual_seed(1)
+np.random.seed(777)
 
 #파라미터
 learning_rate = 0.001
@@ -51,7 +52,7 @@ print(y_train.shape)
 #모델생성
 
 linear1 = torch.nn.Linear(10, 256, bias=True)
-linear2 = torch.nn.Linear(256, 25, bias=True)
+linear2 = torch.nn.Linear(256, 1, bias=True)
 relu = torch.nn.ReLU()
 
 model = torch.nn.Sequential(linear1, relu, linear2)
